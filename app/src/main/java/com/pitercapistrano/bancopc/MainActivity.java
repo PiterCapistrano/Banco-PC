@@ -41,5 +41,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        binding.imgFaturas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navegarTelaDeFatura = new Intent(MainActivity.this, Fatura.class);
+                startActivity(navegarTelaDeFatura);
+            }
+        });
+
+        binding.imgTransferencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navegarTelaDeTransferencia = new Intent(MainActivity.this, Transferencia.class);
+                startActivity(navegarTelaDeTransferencia);
+            }
+        });
+
+        binding.imgPoupanca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent navegarTelaDePoupanca = new Intent(MainActivity.this, Poupanca.class);
+                startActivity(navegarTelaDePoupanca);
+            }
+        });
     }
 }

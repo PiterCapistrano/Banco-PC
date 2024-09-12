@@ -12,15 +12,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Saldo">
+    tools:context=".Poupanca"
+    android:orientation="vertical">
 
     <Toolbar
-        android:id="@+id/toolbarSaldo"
+        android:id="@+id/toolbarPoupanca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue"
-        android:title="Saldo"
+        android:title="Poupanca"
         android:titleTextColor="@color/white"
         android:navigationIcon="@drawable/ic_voltar"
         />
@@ -28,22 +28,22 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saldo Disponível"
+        android:text="Valor Total"
         android:textSize="25sp"
-        android:textColor="@color/black"
         android:textStyle="bold"
-        android:layout_marginTop="100dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R$ 1.500,00 Reais"
-        android:textSize="22sp"
+        android:text="5000,00 Reais"
+        android:textStyle="bold"
+        android:textSize="25sp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         />
-
 </LinearLayout>
 </ScrollView>

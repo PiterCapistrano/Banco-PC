@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Transferencia"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:id="@+id/toolbarTransferencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:title="Transferência"
+        android:titleTextColor="@color/white"
+        android:navigationIcon="@drawable/ic_voltar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transferência"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/txtAgencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Agência:  "
+        android:text=""
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:maxLength="4"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:id="@+id/txtConta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Conta:  "
+        android:text=""
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:digits="0123456789"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:id="@+id/txtDigito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dígito:  "
+        android:text=""
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:maxLength="1"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:id="@+id/txtValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor: "
+        android:text=""
+        android:inputType="numberDecimal"
+        android:digits="0123456789,"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        />
+
+    <Button
+        android:id="@+id/btEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_margin="20sp"
+        android:padding="15dp"
+        android:backgroundTint="@color/blue"
+        />
+
+    <TextView
+        android:id="@+id/txtMensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
+</ScrollView>
