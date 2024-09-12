@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.pitercapistrano.bancopc.databinding.ActivityMainBinding;
 
-// Podemos implementar a instância View.OnClickListener, para que possamos navegar pelas telas
+// Podemos implementar a View.OnClickListener, para que possamos navegar pelas telas
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ActivityMainBinding binding;
