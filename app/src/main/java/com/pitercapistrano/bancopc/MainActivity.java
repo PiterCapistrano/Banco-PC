@@ -12,7 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.pitercapistrano.bancopc.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+// Podemos implementar a instância View.OnClickListener, para que possamos navegar pelas telas
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ActivityMainBinding binding;
 
@@ -41,13 +42,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.imgFaturas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent navegarTelaDeFatura = new Intent(MainActivity.this, Fatura.class);
-                startActivity(navegarTelaDeFatura);
-            }
-        });
+        // A imagem abaixo está utilizando o método da implementação do View.OnClickListener para ir para a tela Fatura
+        binding.imgFaturas.setOnClickListener(this);
 
         binding.imgTransferencia.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,12 +53,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.imgPoupanca.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent navegarTelaDePoupanca = new Intent(MainActivity.this, Poupanca.class);
-                startActivity(navegarTelaDePoupanca);
-            }
-        });
+        binding.imgPoupanca.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        // Ao clicar em algo o método captura o id do objeto
+        int id = view.getId();
+
+        // E faz a verificação se o objeto clicado for igual ao id do if ele irá para a tela correspondente
+        if (id == R.id.imgFaturas) {
+            Intent navegarTelaDeFatura = new Intent(MainActivity.this, Fatura.class);
+            startActivity(navegarTelaDeFatura);
+        } else if (id == R.id.imgPoupanca) {
+            Intent navegarTelaDePoupanca = new Intent(MainActivity.this, Poupanca.class);
+            startActivity(navegarTelaDePoupanca);
+        }
     }
 }
