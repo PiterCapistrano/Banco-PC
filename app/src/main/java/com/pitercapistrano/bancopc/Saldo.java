@@ -33,8 +33,7 @@ public class Saldo extends AppCompatActivity {
         binding.toolbarSaldo.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent voltarTelaPrincipal = new Intent(Saldo.this, MainActivity.class);
-                startActivity(voltarTelaPrincipal);
+                // Também é possível voltar para a tela inicial apenas com o comando finish();
                 finish();
             }
         });
